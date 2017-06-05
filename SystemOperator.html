@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Material Admin</title>
+
+    <!-- Vendor CSS -->
+    <link href="vendors/bower_components/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+    <link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+    <link href="vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.css" rel="stylesheet">
+    <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+    <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="vendors/bower_components/google-material-color/dist/palette.css" rel="stylesheet">
+    <link href="../../FYPN/web/css/style.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="css/app.min.1.css" rel="stylesheet">
+    <link href="css/app.min.2.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+<body data-ma-header="teal">
+<header id="header" class="media newheader">
+    <div class="pull-left h-logo">
+        <a href="index.html" class="hidden-xs">
+            Smart
+            <small>Polling System</small>
+        </a>
+
+        <div class="menu-collapse" data-ma-action="sidebar-open" data-ma-target="main-menu">
+            <div class="mc-wrap">
+                <div class="mcw-line top palette-White bg"></div>
+                <div class="mcw-line center palette-White bg"></div>
+                <div class="mcw-line bottom palette-White bg"></div>
+            </div>
+        </div>
+    </div>
+
+    <ul class="pull-right h-menu">
+        <li class="hm-search-trigger">
+            <a href="" data-ma-action="search-open">
+                <i class="hm-icon zmdi zmdi-search"></i>
+            </a>
+        </li>
+
+        <li class="dropdown hidden-xs hidden-sm h-apps">
+            <a data-toggle="dropdown" href="">
+                <i class="hm-icon zmdi zmdi-apps"></i>
+            </a>
+            <ul class="dropdown-menu pull-right">
+                <li>
+                    <a href="">
+                        <i class="palette-Red-400 bg zmdi zmdi-calendar"></i>
+                        <small>Calendar</small>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="">
+                        <i class="palette-Green-400 bg zmdi zmdi-file-text"></i>
+                        <small>Files</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="palette-Light-Blue bg zmdi zmdi-email"></i>
+                        <small>Mail</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="palette-Orange-400 bg zmdi zmdi-trending-up"></i>
+                        <small>Analytics</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="palette-Purple-300 bg zmdi zmdi-view-headline"></i>
+                        <small>News</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="palette-Blue-Grey bg zmdi zmdi-image"></i>
+                        <small>Gallery</small>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown hidden-xs">
+            <a data-toggle="dropdown" href=""><i class="hm-icon zmdi zmdi-more-vert"></i></a>
+            <ul class="dropdown-menu dm-icon pull-right">
+                <li class="hidden-xs">
+                    <a data-action="fullscreen" href=""><i class="zmdi zmdi-fullscreen"></i> Toggle Fullscreen</a>
+                </li>
+                <li>
+                    <a data-action="clear-localstorage" href=""><i class="zmdi zmdi-delete"></i> Clear Local Storage</a>
+                </li>
+                <li>
+                    <a href=""><i class="zmdi zmdi-face"></i> Privacy Settings</a>
+                </li>
+                <li>
+                    <a href=""><i class="zmdi zmdi-settings"></i> Other Settings</a>
+                </li>
+            </ul>
+        </li>
+        <li class="hm-alerts" data-user-alert="sua-messages" data-ma-action="sidebar-open" data-ma-target="user-alerts">
+            <a href=""><i class="hm-icon zmdi zmdi-notifications"></i></a>
+        </li>
+        <li class="dropdown hm-profile">
+            <a data-toggle="dropdown" href="">
+                <img src="img/profile-pics/1.jpg" alt="">
+            </a>
+
+            <ul class="dropdown-menu pull-right dm-icon">
+                <li>
+                    <a href="profile-about.html"><i class="zmdi zmdi-account"></i> View Profile</a>
+                </li>
+                <li>
+                    <a href=""><i class="zmdi zmdi-input-antenna"></i> Privacy Settings</a>
+                </li>
+                <li>
+                    <a href=""><i class="zmdi zmdi-settings"></i> Settings</a>
+                </li>
+                <li>
+                    <a href=""><i class="zmdi zmdi-time-restore"></i> Logout</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="media-body h-search">
+        <form class="p-relative">
+            <input type="text" class="hs-input" placeholder="Search CNIC">
+            <i class="zmdi zmdi-search hs-reset" data-ma-action="search-clear"></i>
+        </form>
+    </div>
+
+</header>
+<img class="ECP" src="logo.jpg"/>
+
+
+<!--Buttons-->
+<nav class="navbar">
+    <div class="btn-demo">
+        <button class="btn btn-default Operatorbtn" onclick="">Home</button>
+        <div class="btn-group Operatorbtn">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    Voter Helper
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">How to Register</a></li>
+                    <li><a href="#">Check Registration</a></li>
+                    <li><a href="#">Learn About Elections</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="btn-group Operatorbtn">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    Parties & Candidates
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Political Parties</a></li>
+                    <li><a href="#">Allotted Symbols</a></li>
+                    <li><a href="#">Available Symbols</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="btn-group Operatorbtn">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    Laws
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Dropdown link</a></li>
+                    <li><a href="#">Dropdown link</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+<!--Contact Info-->
+
+<section class="OperatorContent">
+<section id="content">
+    <div class="container">
+        <div class="c-header">
+        </div>
+
+        <div class="card" id="profile-main">
+            <div class="pm-overview c-overflow">
+                <div class="pmo-pic">
+                    <div class="p-relative">
+                        <a href="">
+                            <img class="img-responsive" src="voting.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="pmo-block pmo-contact hidden-xs">
+                    <h2>Contact</h2>
+
+                    <ul>
+                        <li><i class="zmdi zmdi-phone"></i> 0300 4546 408</li>
+                        <li><i class="zmdi zmdi-email"></i> sohaibimran@gmail.com</li>
+                        <li>
+                            <i class="zmdi zmdi-pin"></i>
+                            <address class="m-b-0 ng-binding">
+                                192-A Usmania Road,<br>
+                                Wapdatown,<br>
+                                Lahore
+                            </address>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pm-body clearfix">
+                <ul class="tab-nav tn-justified">
+                    <li class="active waves-effect information">Voter Information</li>
+                </ul>
+
+                <div class="pmb-block">
+                    <div class="pmbb-header">
+                        <h2><i class="zmdi zmdi-account m-r-5"></i> Basic Information</h2>
+                    </div>
+                    <div class="pmbb-body p-l-30">
+                        <div class="pmbb-view">
+                            <dl class="dl-horizontal">
+                                <dt>Full Name</dt>
+                                <dd>Sohaib Imran</dd>
+                            </dl>
+                            <dl class="dl-horizontal">
+                                <dt>Father Name</dt>
+                                <dd>Imran Saeed</dd>
+                            </dl>
+                            <dl class="dl-horizontal">
+                                <dt>CNIC</dt>
+                                <dd>35401-4885503-5</dd>
+                            </dl>
+                            <dl class="dl-horizontal">
+                                <dt>Gender</dt>
+                                <dd>Male</dd>
+                            </dl>
+                            <dl class="dl-horizontal">
+                                <dt>Birthday</dt>
+                                <dd>June 23, 1990</dd>
+                            </dl>
+                            <dl class="dl-horizontal">
+                                <dt>Martial Status</dt>
+                                <dd>Single</dd>
+                            </dl>
+                            <dl class="dl-horizontal">
+                                <dt>Registered Vote</dt>
+                                <dd>NA-122</dd>
+                            </dl>
+                            <dl class="dl-horizontal">
+                                <dt>Status</dt>
+                                <dd class="eligible">Eligible</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="pmb-block">
+                    <div class="pmbb-header">
+                        <h2><i class="zmdi zmdi-phone m-r-5"></i> Contact Information</h2>
+                    </div>
+                    <div class="pmbb-body p-l-30">
+                        <div class="pmbb-view">
+                            <dl class="dl-horizontal">
+                                <dt>Mobile Phone</dt>
+                                <dd>030 045 46408</dd>
+                            </dl>
+                            <dl class="dl-horizontal">
+                                <dt>Email Address</dt>
+                                <dd>sohaibimran@gmail.com</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <form action="VoteCasting.html">
+                        <button type="submit" class="btn btn-success verifiedbtn">Verified</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+</section>
+
+
+
+
+<!-- Javascript Libraries -->
+<script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script src="vendors/bower_components/salvattore/dist/salvattore.min.js"></script>
+<script src="vendors/bower_components/flot/jquery.flot.js"></script>
+<script src="vendors/bower_components/flot/jquery.flot.resize.js"></script>
+<script src="vendors/bower_components/flot.curvedlines/curvedLines.js"></script>
+
+<script src="vendors/sparklines/jquery.sparkline.min.js"></script>
+<script src="vendors/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+
+<script src="vendors/bower_components/moment/min/moment.min.js"></script>
+<script src="vendors/bower_components/fullcalendar/dist/fullcalendar.min.js "></script>
+<script src="vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js"></script>
+<script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
+<script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+<script src="vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.min.js"></script>
+<script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<!-- Placeholder for IE9 -->
+<!--[if IE 9 ]>
+<script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+<![endif]-->
+
+<script src="js/flot-charts/curved-line-chart.js"></script>
+<script src="js/flot-charts/bar-chart.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/functions.js"></script>
+<script src="js/actions.js"></script>
+<script src="js/demo.js"></script>
+
+
+</body>
+</html>
